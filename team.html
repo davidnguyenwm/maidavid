@@ -8,13 +8,12 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="header-container">
             <a href="index.html" class="logo">
                 <img src="images/maidavid_3row_logo.webp" alt="Mai Anh Do & David Nguyen Foundation Logo">
             </a>
-            <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+            <button class="menu-toggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -32,14 +31,12 @@
         </div>
     </header>
 
-    <!-- Page Hero -->
     <section class="page-hero">
         <div class="container">
             <h1>Our Team</h1>
         </div>
     </section>
 
-    <!-- Board of Directors -->
     <section class="content-section">
         <div class="container">
             <div class="team-section">
@@ -66,7 +63,6 @@
         </div>
     </section>
 
-    <!-- Advisory Board -->
     <section>
         <div class="container">
             <div class="team-section">
@@ -101,7 +97,6 @@
         </div>
     </section>
 
-    <!-- Join Us CTA -->
     <section class="content-section">
         <div class="container">
             <div class="about-card text-center" style="max-width: 700px; margin: 0 auto;">
@@ -112,7 +107,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -151,4 +145,25 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/sc
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var toggle = document.querySelector(".menu-toggle");
+            var nav = document.getElementById("main-nav");
+            toggle.addEventListener("click", function(e) {
+                e.stopPropagation();
+                nav.classList.toggle("active");
+            });
+            document.addEventListener("click", function(e) {
+                if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+                    nav.classList.remove("active");
+                }
+            });
+            nav.querySelectorAll("a").forEach(function(link) {
+                link.addEventListener("click", function() {
+                    nav.classList.remove("active");
+                });
+            });
+        });
+    </script>
+</body>
+</html>

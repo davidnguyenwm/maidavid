@@ -812,28 +812,43 @@ footer {
     
     .header-container {
         flex-wrap: wrap;
+        position: relative;
     }
     
     .menu-toggle {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        z-index: 1001;
     }
     
     nav {
-        width: 100%;
-        display: none;
-        padding-top: 1rem;
+        flex-basis: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
     }
     
     nav.active {
-        display: block;
+        max-height: 500px;
     }
     
     nav ul {
         flex-direction: column;
+        padding: 0.5rem 0 1rem;
     }
     
     nav a {
         padding: 1rem;
+        border-radius: 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    nav a:last-child {
+        border-bottom: none;
     }
     
     .hero {

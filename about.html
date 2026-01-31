@@ -8,13 +8,12 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="header-container">
             <a href="index.html" class="logo">
                 <img src="images/maidavid_3row_logo.webp" alt="Mai Anh Do & David Nguyen Foundation Logo">
             </a>
-            <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+            <button class="menu-toggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -32,22 +31,18 @@
         </div>
     </header>
 
-    <!-- Page Hero -->
     <section class="page-hero">
         <div class="container">
             <h1>About Our Foundation</h1>
         </div>
     </section>
 
-    <!-- Main Content -->
     <section class="content-section">
         <div class="container">
             <div class="content-wrapper">
-                <!-- Featured Image -->
                 <div class="featured-image">
                     <img src="images/about-hero.webp" alt="Mai Anh Do & David Nguyen Foundation">
                 </div>
-
                 <div class="content-box">
                     <p style="font-size: 1.15rem; color: var(--text-dark);">
                         Mai Anh Do & David Nguyen Foundation is a <strong>non-profit organization</strong> founded in December 2020.
@@ -57,7 +52,6 @@
         </div>
     </section>
 
-    <!-- About Cards -->
     <section>
         <div class="container">
             <div class="about-grid">
@@ -65,19 +59,16 @@
                     <h3>🎯 Our Mission</h3>
                     <p>Our mission is to help international students in the US by providing scholarships and opportunities to allow them reach their full potential and realize their American dream.</p>
                 </div>
-
                 <div class="about-card">
                     <h3>💬 Our Motto</h3>
                     <p><em>"Only a life lived for others is a life worthwhile"</em> — Albert Einstein</p>
                     <p>This quote embodies our philosophy of giving back and supporting others in their journey toward success.</p>
                 </div>
-
                 <div class="about-card">
                     <h3>💰 Funding</h3>
                     <p>We are primarily funded by the co-founders, Mai and David, who were international students in the US themselves.</p>
                     <p>The co-founders are pledging to donate at least <strong>$180,000.00</strong> to support international students over the next 30 years.</p>
                 </div>
-
                 <div class="about-card">
                     <h3>🤝 Your Support</h3>
                     <p>We welcome any form of support from everyone to increase the impact on the community.</p>
@@ -93,7 +84,6 @@
         </div>
     </section>
 
-    <!-- Impact Section -->
     <section class="content-section">
         <div class="container">
             <div class="section-header">
@@ -117,7 +107,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -156,4 +145,25 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/sc
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var toggle = document.querySelector(".menu-toggle");
+            var nav = document.getElementById("main-nav");
+            toggle.addEventListener("click", function(e) {
+                e.stopPropagation();
+                nav.classList.toggle("active");
+            });
+            document.addEventListener("click", function(e) {
+                if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+                    nav.classList.remove("active");
+                }
+            });
+            nav.querySelectorAll("a").forEach(function(link) {
+                link.addEventListener("click", function() {
+                    nav.classList.remove("active");
+                });
+            });
+        });
+    </script>
+</body>
+</html>

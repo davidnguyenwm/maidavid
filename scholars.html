@@ -8,13 +8,12 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="header-container">
             <a href="index.html" class="logo">
                 <img src="images/maidavid_3row_logo.webp" alt="Mai Anh Do & David Nguyen Foundation Logo">
             </a>
-            <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+            <button class="menu-toggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -32,21 +31,17 @@
         </div>
     </header>
 
-    <!-- Page Hero -->
     <section class="page-hero">
         <div class="container">
             <h1>Our Scholars</h1>
         </div>
     </section>
 
-    <!-- Scholars Content -->
     <section class="content-section">
         <div class="container">
-            
-            <!-- 2023 Scholars -->
+
             <div class="scholars-year">
                 <h2>2023</h2>
-                
                 <article class="scholar-card">
                     <div class="scholar-photo">
                         <img src="images/simone_photo.webp" alt="Simone van Wyk">
@@ -60,10 +55,8 @@
                 </article>
             </div>
 
-            <!-- 2022 Scholars -->
             <div class="scholars-year">
                 <h2>2022</h2>
-                
                 <article class="scholar-card">
                     <div class="scholar-photo">
                         <img src="images/5.headshot_Hoang-1-260x300-1.webp" alt="Tri Hoang">
@@ -75,7 +68,6 @@
                         <p>I am a firm believer that America is the land of opportunity. It is a big motivation for me – as someone who first arrived in New York with just $77 in my pocket set aside for me by my mother – to work hard, to overcome challenges and homesickness, to live cheaply so that I could send remittance home to support my family, and to believe that I will succeed one day.</p>
                     </div>
                 </article>
-
                 <article class="scholar-card">
                     <div class="scholar-photo">
                         <img src="images/fuobiezu-200x300-1.webp" alt="Frances Obiezu">
@@ -87,7 +79,6 @@
                         <p>I am truly honored to be one of the three Mai Anh Do & David Nguyen Foundation scholarship recipients this year. Thank you so much to this foundation, and congratulations to all the other applicants who participated in this process.</p>
                     </div>
                 </article>
-
                 <article class="scholar-card">
                     <div class="scholar-photo">
                         <img src="images/aylar-2104917_AW_International-Student-Portraits-118-300x200-1.webp" alt="Aylar Atadurdyyeva">
@@ -101,10 +92,8 @@
                 </article>
             </div>
 
-            <!-- 2021 Scholars -->
             <div class="scholars-year">
                 <h2>2021</h2>
-                
                 <article class="scholar-card">
                     <div class="scholar-photo">
                         <img src="images/Enky-Resized-1.webp" alt="Enky Mhlongo">
@@ -116,7 +105,6 @@
                         <p>However, if there is one thing I inherited from my mother, is the strength of a lioness and the perseverance to work hard.</p>
                     </div>
                 </article>
-
                 <article class="scholar-card">
                     <div class="scholar-photo">
                         <img src="images/Behnaz-Resized-683x1024-1.webp" alt="Behnaz Lahooti">
@@ -133,7 +121,6 @@
         </div>
     </section>
 
-    <!-- Apply CTA -->
     <section>
         <div class="container">
             <div class="about-card text-center" style="max-width: 700px; margin: 0 auto;">
@@ -144,7 +131,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -183,4 +169,25 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/sc
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var toggle = document.querySelector(".menu-toggle");
+            var nav = document.getElementById("main-nav");
+            toggle.addEventListener("click", function(e) {
+                e.stopPropagation();
+                nav.classList.toggle("active");
+            });
+            document.addEventListener("click", function(e) {
+                if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+                    nav.classList.remove("active");
+                }
+            });
+            nav.querySelectorAll("a").forEach(function(link) {
+                link.addEventListener("click", function() {
+                    nav.classList.remove("active");
+                });
+            });
+        });
+    </script>
+</body>
+</html>
