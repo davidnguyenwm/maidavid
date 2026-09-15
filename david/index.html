@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>David Nguyen · Senior Software Engineer</title>
+<meta name="description" content="David Nguyen is a senior software engineer working on Android Automotive, embedded and mobile systems. Former Android tech lead at Meta, Ph.D. in mobile systems, 20+ publications and 6 US patents.">
+<link rel="canonical" href="https://www.maidavid.org/david/">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#13110f" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="David Nguyen · Senior Software Engineer">
+<meta property="og:description" content="Android Automotive, embedded and mobile systems. Former Android tech lead at Meta. Ph.D., 20+ publications, 6 US patents.">
+<meta property="og:url" content="https://www.maidavid.org/david/">
+<meta property="og:image" content="https://www.maidavid.org/david/photo.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a1814'/%3E%3Ctext x='30' y='43' font-family='Georgia,serif' font-size='28' font-weight='700' fill='%23faf8f5' text-anchor='middle'%3EDN%3C/text%3E%3Ccircle cx='52' cy='40' r='3.5' fill='%23e0622b'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "David Nguyen",
+  "url": "https://www.maidavid.org/david/",
+  "image": "https://www.maidavid.org/david/photo.jpg",
+  "jobTitle": "Senior Software Engineer",
+  "worksFor": { "@type": "Organization", "name": "CARIAD SE" },
+  "email": "mailto:dunguk@gmail.com",
+  "sameAs": ["https://www.linkedin.com/in/davidnguyenwm"],
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "William & Mary" },
+    { "@type": "CollegeOrUniversity", "name": "Suffolk University" },
+    { "@type": "CollegeOrUniversity", "name": "Charles University" }
+  ],
+  "knowsLanguage": ["en", "cs", "vi", "de"],
+  "address": { "@type": "PostalAddress", "addressRegion": "Bavaria", "addressCountry": "DE" }
+}
+</script>
+<style>
+  :root {
+    --bg: #faf8f5;
+    --surface: #ffffff;
+    --ink: #1a1814;
+    --muted: #5c574f;
+    --faint: #736d65;
+    --rule: #e7e2da;
+    --accent: #c2410c;
+    --accent-ink: #9a3412;
+    --accent-soft: #fbeee6;
+    --on-accent: #ffffff;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    --radius: 14px;
+    --wrap: 1040px;
+    --gutter: 24px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #13110f;
+      --surface: #1c1916;
+      --ink: #efebe5;
+      --muted: #aea79d;
+      --faint: #8e877d;
+      --rule: #2b2722;
+      --accent: #f0844c;
+      --accent-ink: #f6a574;
+      --accent-soft: #2a1c14;
+      --on-accent: #1a0e07;
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.65 var(--sans); text-rendering: optimizeLegibility; overflow-wrap: break-word; }
+  img { max-width: 100%; display: block; }
+  a { color: var(--accent-ink); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--accent); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  b, strong { font-weight: 600; }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 max(var(--gutter), env(safe-area-inset-left)) 0 max(var(--gutter), env(safe-area-inset-right)); }
+  .i { width: 16px; height: 16px; flex: none; }
+  .skip { position: absolute; left: -999px; top: 10px; z-index: 20; background: var(--surface); color: var(--ink); padding: 8px 12px; border-radius: 8px; }
+  .skip:focus { left: 12px; }
+
+  /* Top bar */
+  .bar { position: sticky; top: 0; z-index: 10; background: var(--bg); background: color-mix(in srgb, var(--bg) 86%, transparent);
+         -webkit-backdrop-filter: saturate(1.4) blur(12px); backdrop-filter: saturate(1.4) blur(12px); border-bottom: 1px solid var(--rule); }
+  .bar-in { display: flex; align-items: center; gap: 20px; height: 60px; }
+  .brand { display: inline-flex; align-items: center; gap: 10px; font: 600 1.08rem/1 var(--serif); color: var(--ink); text-decoration: none; margin-right: auto; }
+  .brand::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  .brand:hover { color: var(--ink); }
+  .bar nav { display: flex; gap: 2px; }
+  .bar nav a { color: var(--muted); text-decoration: none; font-size: .9rem; padding: 6px 10px; border-radius: 8px; }
+  .bar nav a:hover { color: var(--ink); background: var(--accent-soft); }
+
+  /* Buttons */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; font: 600 .94rem/1.2 var(--sans);
+         padding: 10px 16px; border-radius: 10px; text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--rule);
+         transition: border-color .15s ease, background-color .15s ease; -webkit-tap-highlight-color: transparent; }
+  .btn:hover { color: var(--ink); border-color: var(--accent); }
+  .btn-primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+  .btn-primary:hover { background: var(--accent-ink); border-color: var(--accent-ink); color: var(--on-accent); }
+  .btn-sm { min-height: 40px; padding: 8px 12px; font-size: .86rem; }
+
+  /* Hero */
+  .hero { padding: 72px 0 48px; }
+  .hero-grid { display: grid; grid-template-columns: auto 1fr; gap: 52px; align-items: center; }
+  .portrait { width: 230px; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 20px; background: var(--rule);
+              box-shadow: 0 24px 48px -28px rgba(40, 20, 5, .5); }
+  .eyebrow { font: 500 .8rem/1.3 var(--mono); letter-spacing: .04em; color: var(--accent-ink); margin: 0 0 14px; }
+  h1 { font: 600 clamp(2.5rem, 6.4vw, 4.1rem)/1.02 var(--serif); letter-spacing: -.01em; margin: 0 0 16px; }
+  .lede { font-size: clamp(1.08rem, 1.9vw, 1.28rem); line-height: 1.55; color: var(--muted); max-width: 42ch; margin: 0 0 22px; }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px 20px; list-style: none; margin: 0 0 28px; padding: 0; color: var(--muted); font-size: .92rem; }
+  .meta li { display: flex; align-items: center; gap: 7px; }
+  .meta .i { width: 15px; height: 15px; color: var(--faint); }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+  /* Stats */
+  .stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule);
+           border-radius: var(--radius); overflow: hidden; margin: 0 0 64px; }
+  .stat { background: var(--surface); padding: 20px 20px 22px; }
+  .stat b { display: block; font: 600 clamp(1.55rem, 3vw, 2.05rem)/1.1 var(--serif); font-variant-numeric: lining-nums; }
+  .stat span { display: block; margin-top: 6px; font-size: .84rem; line-height: 1.4; color: var(--muted); }
+
+  /* Sections */
+  .section { padding: 60px 0; border-top: 1px solid var(--rule); scroll-margin-top: 40px; }
+  .section-grid { display: grid; grid-template-columns: 190px 1fr; gap: 40px; }
+  .section-head { align-self: start; position: sticky; top: 92px; }
+  .section-head h2 { font: 600 1.5rem/1.2 var(--serif); margin: 0; }
+  .section-head h2::before { content: ""; display: block; width: 22px; height: 3px; border-radius: 2px; background: var(--accent); margin-bottom: 12px; }
+  .prose p { font-size: 1.08rem; margin: 0 0 16px; max-width: 66ch; }
+  .prose p:last-child { margin-bottom: 0; }
+
+  /* Experience timeline */
+  .jobs { list-style: none; margin: 0; padding: 0; }
+  .job { position: relative; padding: 0 0 44px 30px; }
+  .job:last-child { padding-bottom: 0; }
+  .job::before { content: ""; position: absolute; left: 5px; top: 14px; bottom: -8px; width: 1px; background: var(--rule); }
+  .job:last-child::before { display: none; }
+  .job::after { content: ""; position: absolute; left: 0; top: 8px; width: 11px; height: 11px; border-radius: 50%;
+                background: var(--bg); border: 2px solid var(--accent); }
+  .job.now::after { background: var(--accent); }
+  .job-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 2px 16px; }
+  .job h3 { font: 600 1.15rem/1.35 var(--sans); margin: 0; }
+  .when { font: .8rem/1.5 var(--mono); color: var(--faint); white-space: nowrap; }
+  .role { margin: 2px 0 0; color: var(--muted); }
+  .role .title { color: var(--ink); font-weight: 600; }
+  .ctx { margin: 10px 0 0; color: var(--muted); font-size: .95rem; }
+  .sub { margin: 18px 0 0; padding: 18px 22px 12px; background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius); }
+  .sub h4 { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 2px 12px; margin: 0; font: 600 1rem/1.4 var(--sans); }
+  .points { margin: 10px 0 0; padding-left: 18px; }
+  .points li { margin: 0 0 9px; }
+  .points li::marker { color: var(--accent); }
+
+  /* App cards */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; }
+  .card { display: flex; flex-direction: column; gap: 8px; padding: 22px; background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius); }
+  .platform { font: .76rem/1.3 var(--mono); color: var(--faint); }
+  .card h3 { font: 600 1.3rem/1.2 var(--serif); margin: 0; }
+  .card p { margin: 0; color: var(--muted); }
+  .card .more { margin-top: auto; padding-top: 6px; display: inline-flex; align-items: center; gap: 6px; min-height: 36px; font-weight: 600; font-size: .92rem; text-decoration: none; }
+  .card .more .i { width: 14px; height: 14px; }
+
+  /* Education */
+  .edu { list-style: none; margin: 0; padding: 0; }
+  .edu li { display: grid; grid-template-columns: 1fr auto; gap: 2px 16px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+  .edu li:first-child { padding-top: 0; }
+  .edu li:last-child { border-bottom: 0; padding-bottom: 0; }
+  .edu .school { color: var(--muted); }
+  .edu .note { grid-column: 1 / -1; margin: 4px 0 0; font-size: .92rem; color: var(--muted); }
+
+  /* Skills */
+  .skills { display: grid; gap: 24px; }
+  .skill-group h3 { font: 500 .8rem/1.2 var(--mono); color: var(--faint); margin: 0 0 10px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
+  .chips li { font-size: .88rem; line-height: 1.4; padding: 5px 11px; border-radius: 999px; background: var(--surface); border: 1px solid var(--rule); }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 16px; margin: 4px 0 0; }
+  .facts div { padding: 16px 18px; border-radius: var(--radius); background: var(--accent-soft); }
+  .facts dt { font: 500 .8rem/1.2 var(--mono); color: var(--accent-ink); margin: 0 0 6px; }
+  .facts dd { margin: 0; }
+
+  /* Contact + footer */
+  .contact { padding: 72px 0 80px; border-top: 1px solid var(--rule); }
+  .contact h2 { font: 600 clamp(1.9rem, 4.4vw, 2.7rem)/1.1 var(--serif); margin: 0 0 12px; }
+  .contact p { color: var(--muted); max-width: 52ch; margin: 0 0 26px; font-size: 1.08rem; }
+  footer { padding: 22px 0 max(40px, env(safe-area-inset-bottom)); border-top: 1px solid var(--rule); color: var(--faint); font-size: .86rem; }
+
+  /* Tablet */
+  @media (max-width: 900px) {
+    .bar nav { display: none; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .stat:last-child { grid-column: 1 / -1; }
+    .section { padding: 44px 0; }
+    .section-grid { grid-template-columns: 1fr; gap: 20px; }
+    .section-head { position: static; }
+  }
+  /* Phone */
+  @media (max-width: 640px) {
+    :root { --gutter: 18px; }
+    .bar-in { height: 54px; }
+    .hero { padding: 32px 0 32px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 22px; }
+    .portrait { width: 132px; border-radius: 16px; }
+    .meta { flex-direction: column; gap: 6px; margin-bottom: 24px; }
+    .actions .btn { flex: 1 1 auto; }
+    .stats { margin-bottom: 40px; }
+    .stat { padding: 16px 16px 18px; }
+    .prose p { font-size: 1.02rem; }
+    .job { padding-left: 24px; padding-bottom: 36px; }
+    .job-top { flex-direction: column; gap: 0; }
+    .sub { margin-top: 14px; padding: 14px 14px 6px; }
+    .sub h4 { flex-direction: column; gap: 0; }
+    .points { padding-left: 16px; }
+    .edu li { grid-template-columns: 1fr; }
+    .contact { padding: 52px 0 56px; }
+  }
+  @media print {
+    .bar, .actions, .skip { display: none; }
+    body { background: #fff; }
+    .section-head { position: static; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="bar">
+  <div class="wrap bar-in">
+    <a class="brand" href="#top">David Nguyen</a>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#apps">Apps</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-sm" href="David-Nguyen-CV-2026.pdf" download>
+      <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+      CV (PDF)
+    </a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <img class="portrait" src="photo.jpg" width="600" height="750" alt="Portrait of David Nguyen">
+      <div>
+        <p class="eyebrow">Senior Software Engineer</p>
+        <h1>David Nguyen</h1>
+        <p class="lede">Android Automotive, embedded and mobile systems. I work across the stack, from Kotlin UI to C++ and the kernel.</p>
+        <ul class="meta">
+          <li><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Bavaria, Germany</li>
+          <li><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>English · Czech · Vietnamese · German</li>
+          <li><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M8.5 17h7"/></svg>US citizen · EU permanent resident</li>
+        </ul>
+        <div class="actions">
+          <a class="btn btn-primary" href="David-Nguyen-CV-2026.pdf" download>
+            <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+            Download CV
+          </a>
+          <a class="btn" href="mailto:dunguk@gmail.com">
+            <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+            Email
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/davidnguyenwm" rel="me noopener">
+            <svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="stats" role="list">
+      <div class="stat" role="listitem"><b>10 years</b><span>in industry, plus a Ph.D. in mobile systems</span></div>
+      <div class="stat" role="listitem"><b>~60,000</b><span>cars reached by the App Store self-updates I led</span></div>
+      <div class="stat" role="listitem"><b>1B+</b><span>people a day use Facebook Stories &amp; Video, where I was tech lead</span></div>
+      <div class="stat" role="listitem"><b>20+</b><span>publications, 360+ citations</span></div>
+      <div class="stat" role="listitem"><b>6</b><span>US patents</span></div>
+    </div>
+  </div>
+
+  <section class="section" id="about">
+    <div class="wrap section-grid">
+      <div class="section-head"><h2>About</h2></div>
+      <div class="prose">
+        <p>Senior software engineer with 10 years in industry plus a Ph.D. in mobile systems. At <b>CARIAD (Volkswagen Group)</b> I led the in-car App Store self-updates that reached <b>~60,000 production vehicles</b>. I also came up with the <b>AI-personalised App Store</b>, which set the store's future direction. I now work on the <b>Android Automotive OS</b> platform: the C++ Vehicle HAL, vehicle power management, and field defects that cross several systems.</p>
+        <p>Before that I spent 6.5 years at <b>Meta</b> as an Android tech lead for Facebook Stories and Video, used by more than a billion people every day, and then worked at two Bay Area startups. I build and publish my own apps too: <a href="#apps">CardioClowns and StoreBench</a>.</p>
+        <p>I work across the stack, from Kotlin UI to C++ and the kernel, and I'm the person teams bring the hard bugs to.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="experience">
+    <div class="wrap section-grid">
+      <div class="section-head"><h2>Experience</h2></div>
+      <ol class="jobs">
+
+        <li class="job now">
+          <div class="job-top">
+            <h3>CARIAD SE (Volkswagen Group)</h3>
+            <span class="when">Apr 2024 – present</span>
+          </div>
+          <p class="role"><span class="title">Senior Software Engineer</span> · Ingolstadt, Germany</p>
+          <p class="ctx">In-vehicle software for all VW Group brands (Audi, VW, Škoda, SEAT/CUPRA, Porsche, Bentley) on Android Automotive OS.</p>
+
+          <div class="sub">
+            <h4><span>Android Platform: Vehicle HAL &amp; Power Management</span><span class="when">Jun 2026 – present</span></h4>
+            <ul class="points">
+              <li>Develop the <b>Vehicle HAL (VHAL)</b> and <b>Vehicle Power Service</b> in C++, which connect Android to the car's ECUs (power states, suspend-to-RAM, climate, input), together with Android's <b>CarService</b> in Java.</li>
+              <li>Audited the <b>~1,300-file VHAL/VPS codebase</b> for reliability. Fixed whole classes of latent crashes (use-after-free, null dereference, unchecked optionals, uninitialised members) in small, low-risk PR batches before they could reach the field.</li>
+              <li>Own root cause and fix for field defects reported from customer and test vehicles: <b>black screen after sleep</b> (a lost cancel in the power handshake between Android and the vehicle, fixed on 3 release branches), <b>no phone-call audio</b> (audio focus stall), <b>driver-distraction blocking</b> (relaunch storm cut 5–15×, 100% blocking on VW and Audi benches) and <b>climate controls</b> dead at LO/HI.</li>
+            </ul>
+          </div>
+
+          <div class="sub">
+            <h4><span>Group App Store (in-car app store)</span><span class="when">Apr 2024 – Jun 2026</span></h4>
+            <ul class="points">
+              <li><b>Lead and main developer for App Store self-updates</b>, shipping new features and fixes over the air to <b>~60,000 production vehicles</b> already on the road. The Audi self-updates were presented as a success story at the organisation's town hall. For Audi Asterix I set up the release branch and CI/CD, planned the rollout and submitted the release to production (02/2026). I also ramped up developers on the CL46/CL51 and Porsche releases.</li>
+              <li><b>Came up with and led the AI-personalised App Store</b>, taking it from the first idea to the end-to-end architecture and a team presentation to the <b>CARIAD CEO</b>. It set the <b>new direction for the future App Store</b> and led to a joint CARIAD–Harman task force.</li>
+              <li><b>Technical lead of CARIAD's in-house store development</b> (2024), setting the quality bar for both in-house and Harman supplier code: hundreds of code reviews (10–31 a week). Brands (Audi, Porsche, VW) came to me directly with issues. Wrote the Hidden Features engineering-menu concept.</li>
+              <li><b>Release manager</b> on rotation for multi-brand deliveries, e.g. one CL53/CL48 release integrated for <b>7 brands</b> (Audi, VW, Škoda, CUPRA, Porsche, Bentley, Ford) plus MIB4 packages: builds, cherry-picks, smoke tests, handover to integration.</li>
+              <li>Implemented <b>EU Digital Services Act (DSA)</b> compliance in the store client for all brands: age ratings, in-app-purchase, advertising and publisher information, and the "report illegal content" flow.</li>
+              <li>Go-to engineer for hard cross-system defects between the store, Harman's Ignite SDK, HMI and backend (multi-user account switching, OEM app visibility, a 14-build bisection). Closed ~70 tickets and helped reach near-zero bugs for CL53.</li>
+              <li>Interviewed ~17 candidates (two joined the team), onboarded and taught new engineers, and co-presented a talk at <b>droidcon 2024</b> with Harman.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="job">
+          <div class="job-top">
+            <h3>Mylio Photos</h3>
+            <span class="when">Aug 2023 – Apr 2024</span>
+          </div>
+          <p class="role"><span class="title">Software Engineer (Android Lead)</span> · San Francisco Bay Area</p>
+          <ul class="points">
+            <li>Led Android development of a cross-platform photo-organisation app at a 29-person startup (9 engineers).</li>
+          </ul>
+        </li>
+
+        <li class="job">
+          <div class="job-top">
+            <h3>Mission Peak</h3>
+            <span class="when">Feb 2023 – Aug 2023</span>
+          </div>
+          <p class="role"><span class="title">Software Engineer</span> · San Francisco</p>
+          <ul class="points">
+            <li>Built Android compatibility-testing solutions for device OEMs at an early-stage startup.</li>
+          </ul>
+        </li>
+
+        <li class="job">
+          <div class="job-top">
+            <h3>Meta</h3>
+            <span class="when">Aug 2016 – Jan 2023</span>
+          </div>
+          <p class="role"><span class="title">Engineering Lead</span> (2018–2023) · <span class="title">Software Engineer</span> (2016–2018) · Menlo Park, CA</p>
+          <p class="ctx">Android tech lead for Facebook Stories and Video Player, used by more than 1 billion people every day.</p>
+          <ul class="points">
+            <li><b>Player Plugin Platform:</b> co-designed the Android infrastructure that lets ~20 product teams add features to the video player. The UI is driven from the server, so changes reach production in 1 day instead of 2 weeks.</li>
+            <li><b>Stories pagination:</b> led the infrastructure that loads more stories in feed units, which had the largest engagement impact in a ~200-engineer org.</li>
+            <li><b>Fire TV:</b> co-built the first Facebook Video app for Amazon Fire TV, bringing the product to about 50 M more users.</li>
+            <li><b>Memory optimisation and connected home:</b> reduced app crashes by 14% and launch delays by 78% through heap-limit tuning. Built the hub-to-device BLE pairing, authentication and command app for a smart-home system. This work led to 4 US patents.</li>
+            <li>One of ~15 company-wide <b>Android release sheriffs</b>, gatekeeping Facebook app hotfixes. Managed 8 interns, all of whom got full-time offers (Meta, Google, …). Mentored engineers and ran 100+ interviews.</li>
+          </ul>
+        </li>
+
+        <li class="job">
+          <div class="job-top">
+            <h3>William &amp; Mary</h3>
+            <span class="when">Sep 2011 – Jul 2016</span>
+          </div>
+          <p class="role"><span class="title">Research Software Engineer / Ph.D. Candidate</span> · Williamsburg, VA</p>
+          <ul class="points">
+            <li><b>SmartIO</b> (ACM MobiSys 2015): large-scale study of Android I/O delay on 2,611 devices. Prioritising reads over writes in the I/O stack cut app launch delay by up to 38% and runtime delay by up to 30%. Led to a US patent and a startup.</li>
+            <li><b>SmartStorage:</b> first study of how storage affects smartphone energy use, down to the block layer and device driver. Dynamically tuning storage parameters saved 23–52% energy across the 20 most popular apps.</li>
+          </ul>
+        </li>
+
+        <li class="job">
+          <div class="job-top">
+            <h3>Facebook</h3>
+            <span class="when">Summers 2014 &amp; 2015</span>
+          </div>
+          <p class="role"><span class="title">Engineering Intern</span> (2×) · Menlo Park, CA</p>
+          <ul class="points">
+            <li>First hub-to-device app for what became Facebook Portal (2015). Memory optimisations for the Facebook Phone project (2014).</li>
+          </ul>
+        </li>
+
+        <li class="job">
+          <div class="job-top">
+            <h3>Christopher Newport University · Suffolk University</h3>
+            <span class="when">Sep 2009 – May 2013</span>
+          </div>
+          <p class="role"><span class="title">Lecturer</span> · Christopher Newport (2013) · Suffolk (2009–2011)</p>
+          <ul class="points">
+            <li>Taught data communication systems, programming and web development (HTML/CSS/JavaScript/PHP).</li>
+          </ul>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="apps">
+    <div class="wrap section-grid">
+      <div class="section-head"><h2>Apps</h2></div>
+      <div class="cards">
+        <article class="card">
+          <span class="platform">iPhone · Apple Watch</span>
+          <h3>CardioClowns</h3>
+          <p>The daily step game for family and friends. Create a group, share a code, and battle for the daily crown.</p>
+          <a class="more" href="https://cardioclowns.com">cardioclowns.com
+            <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+        </article>
+        <article class="card">
+          <span class="platform">Android · 2013</span>
+          <h3>StoreBench</h3>
+          <p>A storage benchmark from my Ph.D. research. It tested flash and SD card speed, measured launch and run-time delays of 20 popular apps, and compared your phone with others.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="education">
+    <div class="wrap section-grid">
+      <div class="section-head"><h2>Education</h2></div>
+      <ul class="edu">
+        <li>
+          <div><b>Ph.D., Computer Science</b><br><span class="school">William &amp; Mary, USA</span></div>
+          <span class="when">2011 – 2016</span>
+          <p class="note">Mobile systems, storage and performance · 20+ publications (ACM MobiSys, UbiComp, IEEE INFOCOM, IEEE TMM, …) · 6 US patents · 360+ citations, h-index 10</p>
+        </li>
+        <li>
+          <div><b>M.Sc., Computer Science</b><br><span class="school">Suffolk University, Boston, USA</span></div>
+          <span class="when">2010</span>
+        </li>
+        <li>
+          <div><b>Visiting Graduate Student, Algorithms &amp; Data Structures</b><br><span class="school">Stanford University, USA</span></div>
+          <span class="when">2009</span>
+        </li>
+        <li>
+          <div><b>Bachelor, Mathematics &amp; Computer Science</b><br><span class="school">Charles University, Prague, Czech Republic</span></div>
+          <span class="when">2007</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="wrap section-grid">
+      <div class="section-head"><h2>Skills</h2></div>
+      <div class="skills">
+        <div class="skill-group">
+          <h3>Programming</h3>
+          <ul class="chips">
+            <li>Kotlin</li><li>Java</li><li>C++</li><li>Swift (iPhone, Apple Watch)</li><li>Python</li><li>Shell</li><li>JavaScript</li><li>React Native</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Automotive</h3>
+          <ul class="chips">
+            <li>Android Automotive OS (AAOS)</li><li>Vehicle HAL / AIDL</li><li>CarService</li><li>Vehicle power management</li><li>Over-the-air app updates</li><li>Multi-brand release &amp; integration</li><li>Harman Ignite SDK</li><li>Test benches and car tests</li><li>Multi-ECU trace analysis</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Android</h3>
+          <ul class="chips">
+            <li>Multi-display / multi-user apps</li><li>Gradle/AGP &amp; JDK upgrades</li><li>Retrofit/OkHttp</li><li>Robolectric</li><li>AOSP (Soong)</li><li>Binder</li><li>SELinux</li><li>Linux kernel &amp; storage/memory performance</li><li>Bluetooth LE</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Engineering</h3>
+          <ul class="chips">
+            <li>GoogleTest</li><li>JUnit</li><li>Hardware-in-the-loop testing</li><li>GitHub Actions</li><li>Docker</li><li>Git</li><li>Gerrit</li><li>Jira</li><li>Code review</li><li>Mentoring</li><li>Hiring</li>
+          </ul>
+        </div>
+        <dl class="facts">
+          <div><dt>Spoken languages</dt><dd>English (native) · Czech (fluent) · Vietnamese (fluent) · German (communicative)</dd></div>
+          <div><dt>Work authorisation</dt><dd>US citizen · EU permanent resident, no visa sponsorship required</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Get in touch</h2>
+      <p>Email is the quickest way to reach me. You can also find me on LinkedIn or download my CV.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:dunguk@gmail.com">
+          <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+          dunguk@gmail.com
+        </a>
+        <a class="btn" href="https://www.linkedin.com/in/davidnguyenwm" rel="me noopener">
+          <svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          LinkedIn
+        </a>
+        <a class="btn" href="David-Nguyen-CV-2026.pdf" download>
+          <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+          CV (PDF)
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 David Nguyen</div>
+</footer>
+</body>
+</html>
