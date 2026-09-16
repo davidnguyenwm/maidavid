@@ -289,8 +289,8 @@
     <div class="wrap section-grid">
       <div class="section-head"><h2>About</h2></div>
       <div class="prose">
-        <p>Senior software engineer with 10 years in industry plus a Ph.D. in mobile systems. At <b>CARIAD (Volkswagen Group)</b> I led the in-car App Store self-updates that reached <b>~60,000 production vehicles</b>. I also came up with the <b>AI-personalised App Store</b>, which set the store's future direction. I now work on the <b>Android Automotive OS</b> platform: the C++ Vehicle HAL, vehicle power management, and field defects that cross several systems.</p>
-        <p>Before that I spent 6.5 years at <b>Meta</b> as an Android tech lead for Facebook Stories and Video, used by more than a billion people every day, and then worked at two Bay Area startups. I build and publish my own apps too: <a href="#apps">CardioClowns and StoreBench</a>.</p>
+        <p>Senior software engineer with 10 years in industry plus a Ph.D. in mobile systems. At <b>CARIAD (Volkswagen Group)</b> I led the in-car App Store self-updates that reached <b>~60,000 production vehicles</b>, and came up with the <b>AI-personalised App Store</b> that set the store's future direction. Today I work on the <b>Android Automotive OS</b> platform: the C++ Vehicle HAL and vehicle power management.</p>
+        <p>Before that, 6.5 years at <b>Meta</b> as Android tech lead for Facebook Stories and Video, then two Bay Area startups. I build my own apps too: <a href="#apps">CardioClowns and StoreBench</a>.</p>
         <p>I work across the stack, from Kotlin UI to C++ and the kernel, and I'm the person teams bring the hard bugs to.</p>
       </div>
     </div>
@@ -312,22 +312,21 @@
           <div class="sub">
             <h4><span>Android Platform: Vehicle HAL &amp; Power Management</span><span class="when">Jun 2026 – present</span></h4>
             <ul class="points">
-              <li>Develop the <b>Vehicle HAL (VHAL)</b> and <b>Vehicle Power Service</b> in C++, which connect Android to the car's ECUs (power states, suspend-to-RAM, climate, input), together with Android's <b>CarService</b> in Java.</li>
-              <li>Audited the <b>~1,300-file VHAL/VPS codebase</b> for reliability. Fixed whole classes of latent crashes (use-after-free, null dereference, unchecked optionals, uninitialised members) in small, low-risk PR batches before they could reach the field.</li>
-              <li>Own root cause and fix for field defects reported from customer and test vehicles: <b>black screen after sleep</b> (a lost cancel in the power handshake between Android and the vehicle, fixed on 3 release branches), <b>no phone-call audio</b> (audio focus stall), <b>driver-distraction blocking</b> (relaunch storm cut 5–15×, 100% blocking on VW and Audi benches) and <b>climate controls</b> dead at LO/HI.</li>
+              <li>Develop the <b>Vehicle HAL</b> and <b>Vehicle Power Service</b> in C++, the layer between Android and the car's ECUs, plus Android's <b>CarService</b> in Java.</li>
+              <li>Audited the <b>~1,300-file VHAL/VPS codebase</b> and fixed whole classes of latent crashes before they reached the field.</li>
+              <li>Own root cause and fix for defects reported from customer cars: <b>black screen after sleep</b>, <b>no phone-call audio</b>, <b>driver-distraction blocking</b> and <b>climate controls</b> dead at LO/HI.</li>
             </ul>
           </div>
 
           <div class="sub">
             <h4><span>Group App Store (in-car app store)</span><span class="when">Apr 2024 – Jun 2026</span></h4>
             <ul class="points">
-              <li><b>Lead and main developer for App Store self-updates</b>, shipping new features and fixes over the air to <b>~60,000 production vehicles</b> already on the road. The Audi self-updates were presented as a success story at the organisation's town hall. For Audi Asterix I set up the release branch and CI/CD, planned the rollout and submitted the release to production (02/2026). I also ramped up developers on the CL46/CL51 and Porsche releases.</li>
-              <li><b>Came up with and led the AI-personalised App Store</b>, taking it from the first idea to the end-to-end architecture and a team presentation to the <b>CARIAD CEO</b>. It set the <b>new direction for the future App Store</b> and led to a joint CARIAD–Harman task force.</li>
-              <li><b>Technical lead of CARIAD's in-house store development</b> (2024), setting the quality bar for both in-house and Harman supplier code: hundreds of code reviews (10–31 a week). Brands (Audi, Porsche, VW) came to me directly with issues. Wrote the Hidden Features engineering-menu concept.</li>
-              <li><b>Release manager</b> on rotation for multi-brand deliveries, e.g. one CL53/CL48 release integrated for <b>7 brands</b> (Audi, VW, Škoda, CUPRA, Porsche, Bentley, Ford) plus MIB4 packages: builds, cherry-picks, smoke tests, handover to integration.</li>
-              <li>Implemented <b>EU Digital Services Act (DSA)</b> compliance in the store client for all brands: age ratings, in-app-purchase, advertising and publisher information, and the "report illegal content" flow.</li>
-              <li>Go-to engineer for hard cross-system defects between the store, Harman's Ignite SDK, HMI and backend (multi-user account switching, OEM app visibility, a 14-build bisection). Closed ~70 tickets and helped reach near-zero bugs for CL53.</li>
-              <li>Interviewed ~17 candidates (two joined the team), onboarded and taught new engineers, and co-presented <a href="https://www.youtube.com/watch?v=qkbtsSpcvjM">"Developing Android Automotive Apps for the VW Group" at <b>droidcon Berlin 2024</b></a>.</li>
+              <li><b>Lead and main developer for App Store self-updates</b>, shipping features and fixes over the air to <b>~60,000 production vehicles</b> — a success story at the organisation's town hall.</li>
+              <li><b>Came up with and led the AI-personalised App Store</b>, from first idea to architecture and a presentation to the <b>CARIAD CEO</b>. It set the <b>new direction for the future App Store</b>.</li>
+              <li><b>Technical lead of CARIAD's in-house store development</b> (2024), setting the quality bar for in-house and supplier code across hundreds of reviews.</li>
+              <li><b>Release manager</b> on rotation, taking one release through integration for <b>7 brands</b>, and delivered <b>EU Digital Services Act</b> compliance for all of them.</li>
+              <li>Go-to engineer for hard cross-system bugs across the store, Harman's Ignite SDK, HMI and backend. Closed ~70 tickets.</li>
+              <li>Interviewed ~17 candidates, onboarded new engineers, and spoke at <a href="https://www.youtube.com/watch?v=qkbtsSpcvjM"><b>droidcon Berlin 2024</b></a>.</li>
             </ul>
           </div>
         </li>
@@ -362,11 +361,10 @@
           <p class="role"><span class="title">Engineering Lead</span> (2018–2023) · <span class="title">Software Engineer</span> (2016–2018) · Menlo Park, CA</p>
           <p class="ctx">Android tech lead for Facebook Stories and Video Player, used by more than 1 billion people every day.</p>
           <ul class="points">
-            <li><b>Player Plugin Platform:</b> co-designed the Android infrastructure that lets ~20 product teams add features to the video player. The UI is driven from the server, so changes reach production in 1 day instead of 2 weeks.</li>
-            <li><b>Stories pagination:</b> led the infrastructure that loads more stories in feed units, which had the largest engagement impact in a ~200-engineer org.</li>
-            <li><b>Fire TV:</b> co-built the first Facebook Video app for Amazon Fire TV, bringing the product to about 50 M more users.</li>
-            <li><b>Memory optimisation and connected home:</b> reduced app crashes by 14% and launch delays by 78% through heap-limit tuning. Built the hub-to-device BLE pairing, authentication and command app for a smart-home system. This work led to <a href="https://patents.google.com/?inventor=Dung+Nguyen+Tien&amp;assignee=Facebook">5 granted US patents</a>.</li>
-            <li>One of ~15 company-wide <b>Android release sheriffs</b>, gatekeeping Facebook app hotfixes. Managed 8 interns, all of whom got full-time offers (Meta, Google, …). Mentored engineers and ran 100+ interviews.</li>
+            <li><b>Player Plugin Platform:</b> co-designed the infrastructure that lets ~20 teams ship video-player features in 1 day instead of 2 weeks.</li>
+            <li><b>Stories pagination:</b> largest engagement impact in a ~200-engineer org. <b>Fire TV:</b> co-built the first Facebook Video app, reaching ~50 M more users.</li>
+            <li><b>Memory optimisation and connected home:</b> crashes down 14%, launch delays down 78%; <a href="https://patents.google.com/?inventor=Dung+Nguyen+Tien&amp;assignee=Facebook">5 granted US patents</a>.</li>
+            <li>One of ~15 company-wide <b>Android release sheriffs</b>. Managed 8 interns, all of whom got full-time offers, and ran 100+ interviews.</li>
           </ul>
         </li>
 
@@ -377,8 +375,8 @@
           </div>
           <p class="role"><span class="title">Research Software Engineer / Ph.D. Candidate</span> · Williamsburg, VA</p>
           <ul class="points">
-            <li><b>SmartIO</b> (ACM MobiSys 2015): large-scale study of Android I/O delay on 2,611 devices. Prioritising reads over writes in the I/O stack cut app launch delay by up to 38% and runtime delay by up to 30%. Led to multiple publications and a startup.</li>
-            <li><b>SmartStorage:</b> first study of how storage affects smartphone energy use, down to the block layer and device driver. Dynamically tuning storage parameters saved 23–52% energy across the 20 most popular apps. Led to a <a href="https://patents.google.com/patent/US9026819B2/en">granted US patent</a>.</li>
+            <li><b>SmartIO</b> (ACM MobiSys 2015): I/O study across 2,611 devices; prioritising reads cut app launch delay by up to 38%. Led to a startup.</li>
+            <li><b>SmartStorage:</b> first study of storage energy use on smartphones; dynamic tuning saved 23–52% energy. Led to a <a href="https://patents.google.com/patent/US9026819B2/en">granted US patent</a>.</li>
           </ul>
         </li>
 
@@ -436,7 +434,7 @@
         <li>
           <div><b>Ph.D., Computer Science</b><br><span class="school">William &amp; Mary, USA</span></div>
           <span class="when">2011 – 2016</span>
-          <p class="note">Mobile systems, storage and performance · <a href="https://scholar.google.com/citations?user=wRM2oLUAAAAJ&amp;hl=en">20+ publications</a> (ACM MobiSys, UbiComp, IEEE INFOCOM, IEEE TMM, …), 360+ citations, h-index 10 · 6 granted US patents (<a href="https://patents.google.com/?inventor=Dung+Nguyen+Tien&amp;assignee=Facebook">5 at Meta</a>, <a href="https://patents.google.com/patent/US9026819B2/en">1 at William &amp; Mary</a>)</p>
+          <p class="note">Mobile systems, storage and performance · <a href="https://scholar.google.com/citations?user=wRM2oLUAAAAJ&amp;hl=en">20+ publications</a>, 360+ citations · 6 granted US patents (<a href="https://patents.google.com/?inventor=Dung+Nguyen+Tien&amp;assignee=Facebook">5 Meta</a>, <a href="https://patents.google.com/patent/US9026819B2/en">1 William &amp; Mary</a>)</p>
         </li>
         <li>
           <div><b>M.Sc., Computer Science</b><br><span class="school">Suffolk University, Boston, USA</span></div>
