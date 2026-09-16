@@ -163,6 +163,14 @@
   .card .more { margin-top: auto; padding-top: 6px; display: inline-flex; align-items: center; gap: 6px; min-height: 36px; font-weight: 600; font-size: .92rem; text-decoration: none; }
   .card .more .i { width: 14px; height: 14px; }
 
+  /* Recommendation snapshots */
+  .quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 16px; }
+  .quote { margin: 0; padding: 20px 22px; background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius); }
+  .quote p { margin: 0 0 12px; font-size: .98rem; line-height: 1.6; }
+  .quote footer { color: var(--faint); font-size: .84rem; line-height: 1.45; }
+  .quote .who { display: block; color: var(--ink); font-weight: 600; font-size: .9rem; }
+  .quotes-note { margin: 16px 0 0; color: var(--faint); font-size: .86rem; }
+
   /* Education */
   .edu { list-style: none; margin: 0; padding: 0; }
   .edu li { display: grid; grid-template-columns: 1fr auto; gap: 2px 16px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
@@ -238,6 +246,7 @@
     <nav aria-label="Sections">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
+      <a href="#people">People</a>
       <a href="#apps">Apps</a>
       <a href="#education">Education</a>
       <a href="#skills">Skills</a>
@@ -410,6 +419,37 @@
         </li>
 
       </ol>
+    </div>
+  </section>
+
+  <section class="section" id="people">
+    <div class="wrap section-grid">
+      <div class="section-head"><h2>What people say</h2></div>
+      <div>
+        <div class="quotes">
+          <figure class="quote">
+            <p>&ldquo;An incredibly thoughtful, quality-focused engineer. Everything he builds is with an eye for detail and scalability &hellip; always looking for opportunities to uplift, support, and coach others.&rdquo;</p>
+            <footer><span class="who">Lillian Michalek</span>Engineering Manager, Meta &middot; managed David &middot; 2023</footer>
+          </figure>
+          <figure class="quote">
+            <p>&ldquo;He combines deep technical knowledge of Android with excellent project planning, execution, and communication skills.&rdquo;</p>
+            <footer><span class="who">Scott Storkel</span>Mobile Engineering Lead &middot; worked with David on Stories &middot; 2023</footer>
+          </figure>
+          <figure class="quote">
+            <p>&ldquo;A fantastic engineering partner &hellip; a deep thinker, always considering how technical decisions align with user needs.&rdquo;</p>
+            <footer><span class="who">Tory Hargro</span>Director of Product Design, WhatsApp &middot; same team at Meta &middot; 2024</footer>
+          </figure>
+          <figure class="quote">
+            <p>&ldquo;My mentor during onboarding on the Android codebase. Somebody with a very deep knowledge of Android and general software engineering.&rdquo;</p>
+            <footer><span class="who">Rakesh Gupta</span>Software Engineer, Google &middot; mentored by David at Meta &middot; 2023</footer>
+          </figure>
+          <figure class="quote">
+            <p>&ldquo;By far the best lecturer encountered during my experience as a student &hellip; his lectures were clear and well prepared.&rdquo;</p>
+            <footer><span class="who">June Zinck</span>Student, Suffolk University &middot; 2011</footer>
+          </figure>
+        </div>
+        <p class="quotes-note">Shortened from recommendations on <a href="https://www.linkedin.com/in/davidnguyenwm/details/recommendations/">LinkedIn</a>, where they appear in full.</p>
+      </div>
     </div>
   </section>
 
